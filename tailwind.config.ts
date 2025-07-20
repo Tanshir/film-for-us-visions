@@ -83,12 +83,16 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)'
+				'film-strip': 'var(--film-strip)',
+				'gradient-primary': 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)))'
 			},
 			boxShadow: {
-				'soft': 'var(--shadow-soft)',
-				'medium': 'var(--shadow-medium)'
+				'sketch': 'var(--shadow-sketch)',
+				'bold': 'var(--shadow-bold)'
+			},
+			fontFamily: {
+				'sketch': ['Comic Sans MS', 'cursive'],
+				'hand': ['Kalam', 'cursive']
 			}
 		}
 	},

@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Lightbulb, Users, Globe } from "lucide-react";
+import { Heart, Lightbulb, Users, Globe, Award, Calendar, Target, Zap } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -25,82 +25,184 @@ const About = () => {
     }
   ];
 
+  const milestones = [
+    { year: "2020", event: "Founded Film For Us with 5 founding members", icon: Target },
+    { year: "2021", event: "First community workshop with 25 participants", icon: Users },
+    { year: "2022", event: "Launched mobile cinema program", icon: Zap },
+    { year: "2023", event: "Won first documentary award at regional festival", icon: Award },
+    { year: "2024", event: "Expanded to 15 communities across the region", icon: Globe }
+  ];
+
+  const team = [
+    { name: "Sarah Ahmed", role: "Founder & Creative Director", experience: "15 years in documentary filmmaking" },
+    { name: "Michael Chen", role: "Education Program Manager", experience: "Former film school instructor" },
+    { name: "Priya Patel", role: "Community Outreach Coordinator", experience: "Social work and community engagement" },
+    { name: "David Rodriguez", role: "Technical Director", experience: "Post-production and equipment specialist" }
+  ];
+
   return (
-    <div className="min-h-screen py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-primary">Film For Us</span>
-          </h1>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We are an independent film organization dedicated to democratizing cinema 
-            and empowering communities through the art of storytelling.
-          </p>
-        </div>
+    <div className="min-h-screen bg-background">
+      {/* Film Strip Header */}
+      <div className="h-8 bg-film-strip border-b-4 border-primary"></div>
+      
+      <div className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Header with sketch style */}
+          <div className="text-center mb-16 relative">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+              <div className="w-32 h-4 border-2 border-primary bg-card shadow-sketch transform rotate-2"></div>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 relative z-10">
+              About <span className="bg-primary text-primary-foreground px-4 py-2 transform -rotate-1 inline-block">Film For Us</span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              An independent film collective democratizing cinema through community education, 
+              storytelling, and creative empowerment since 2020.
+            </p>
+          </div>
 
-        {/* Mission Statement */}
-        <div className="mb-20">
-          <Card className="shadow-soft">
-            <CardContent className="p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Our Mission</h2>
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary mx-auto flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">1</span>
-                  </div>
-                  <h3 className="text-lg font-semibold">Educate</h3>
-                  <p className="text-muted-foreground">
-                    Teaching film literacy and production skills to mass audiences
+          {/* Story Section */}
+          <div className="mb-20">
+            <Card className="border-4 border-primary shadow-bold transform rotate-1 overflow-hidden">
+              <CardContent className="p-8 md:p-12">
+                <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
+                <div className="prose prose-lg max-w-none text-muted-foreground">
+                  <p className="mb-6">
+                    Film For Us was born from a simple belief: everyone has a story worth telling, 
+                    and everyone deserves access to the tools and knowledge to tell it. What started 
+                    as a small group of filmmakers conducting weekend workshops has grown into a 
+                    thriving community movement.
+                  </p>
+                  <p className="mb-6">
+                    We've witnessed the transformative power of putting a camera in someone's hands 
+                    for the first time, the joy of a community seeing their stories on screen, and 
+                    the pride of underprivileged youth mastering new technical skills.
+                  </p>
+                  <p>
+                    Today, we continue to break down barriers in film education, creating pathways 
+                    for diverse voices to enter the industry and ensuring that cinema truly becomes 
+                    a medium for all people, not just a privileged few.
                   </p>
                 </div>
-                <div className="space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary mx-auto flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">2</span>
-                  </div>
-                  <h3 className="text-lg font-semibold">Empower</h3>
-                  <p className="text-muted-foreground">
-                    Supporting underprivileged individuals in pursuing film education
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-primary mx-auto flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">3</span>
-                  </div>
-                  <h3 className="text-lg font-semibold">Amplify</h3>
-                  <p className="text-muted-foreground">
-                    Helping communities tell their diverse stories through digital media
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+              </CardContent>
+            </Card>
+          </div>
 
-        {/* Core Values */}
-        <div>
-          <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value) => (
-              <Card 
-                key={value.title}
-                className="hover:shadow-medium transition-shadow duration-300"
-              >
+          {/* Mission Cards */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12">Our Three-Pillar Mission</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="border-2 border-primary shadow-sketch hover:shadow-bold transition-all transform hover:-rotate-1">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
-                    <value.icon className="w-6 h-6 text-primary" />
+                  <div className="w-20 h-20 border-4 border-primary rounded-full mx-auto mb-4 flex items-center justify-center bg-card">
+                    <Lightbulb className="w-8 h-8" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">{value.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {value.description}
+                  <h3 className="text-xl font-bold mb-3">EDUCATE</h3>
+                  <p className="text-muted-foreground">
+                    Teaching film literacy, technical skills, and storytelling to mass audiences 
+                    through hands-on workshops and community screenings.
                   </p>
                 </CardContent>
               </Card>
-            ))}
+              <Card className="border-2 border-primary shadow-sketch hover:shadow-bold transition-all transform hover:rotate-1">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 border-4 border-primary rounded-full mx-auto mb-4 flex items-center justify-center bg-card">
+                    <Heart className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">EMPOWER</h3>
+                  <p className="text-muted-foreground">
+                    Providing scholarships, equipment access, and mentorship to underprivileged 
+                    individuals pursuing careers in filmmaking.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="border-2 border-primary shadow-sketch hover:shadow-bold transition-all transform hover:-rotate-1">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 border-4 border-primary rounded-full mx-auto mb-4 flex items-center justify-center bg-card">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">AMPLIFY</h3>
+                  <p className="text-muted-foreground">
+                    Helping communities document and share their diverse stories through 
+                    collaborative digital visual media projects.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12">Our Journey</h2>
+            <div className="space-y-6">
+              {milestones.map((milestone, idx) => (
+                <div key={milestone.year} className="flex items-center gap-6">
+                  <div className="w-20 h-20 border-4 border-primary rounded-full flex items-center justify-center bg-card shadow-sketch flex-shrink-0">
+                    <milestone.icon className="w-8 h-8" />
+                  </div>
+                  <div className="flex-1">
+                    <Card className="border-2 border-primary">
+                      <CardContent className="p-4">
+                        <div className="flex items-center gap-4">
+                          <span className="text-2xl font-bold text-primary">{milestone.year}</span>
+                          <p className="text-muted-foreground">{milestone.event}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Core Values */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {values.map((value, idx) => (
+                <Card 
+                  key={value.title}
+                  className={`border-2 border-primary hover:shadow-bold transition-all transform ${
+                    idx % 2 === 0 ? 'hover:rotate-1' : 'hover:-rotate-1'
+                  }`}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 border-2 border-primary rounded-full mx-auto mb-4 flex items-center justify-center bg-background">
+                      <value.icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-3">{value.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Team Section */}
+          <div>
+            <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {team.map((member, idx) => (
+                <Card key={member.name} className="border-2 border-primary shadow-sketch">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-20 h-20 border-4 border-primary rounded-full mx-auto mb-4 bg-muted flex items-center justify-center">
+                      <span className="text-2xl font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                    </div>
+                    <h3 className="text-lg font-bold mb-2">{member.name}</h3>
+                    <p className="text-sm font-semibold text-primary mb-2">{member.role}</p>
+                    <p className="text-xs text-muted-foreground">{member.experience}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Film Strip Footer */}
+      <div className="h-8 bg-film-strip border-t-4 border-primary"></div>
     </div>
   );
 };

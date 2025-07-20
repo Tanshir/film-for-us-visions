@@ -2,57 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Film for Us Design System - Black and White Theme
-All colors MUST be HSL for proper theming.
+/* Film for Us Design System - Hand-drawn Artistic Theme
+Inspired by sketch-like, creative visuals with film strip borders
 */
 
 @layer base {
   :root {
-    /* Black and White color palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    /* Hand-drawn inspired palette */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Pure black primary */
+    /* Bold black for primary elements */
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    /* Dark gray secondary */
-    --secondary: 0 0% 20%;
+    /* Sketch-like gray for secondary */
+    --secondary: 0 0% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Light gray muted tones */
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    /* Light sketch tones */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Medium gray accent */
-    --accent: 0 0% 30%;
+    /* Artistic accent */
+    --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 0 0% 85%;
+    --input: 0 0% 95%;
+    --ring: 0 0% 10%;
 
-    --radius: 0.5rem;
+    --radius: 0.3rem;
 
-    /* Simple gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    /* Film strip pattern */
+    --film-strip: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 10px,
+      hsl(var(--primary)) 10px,
+      hsl(var(--primary)) 20px
+    );
     
-    /* Simple shadows */
-    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --shadow-medium: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    /* Sketch shadows */
+    --shadow-sketch: 2px 2px 0px hsl(var(--primary) / 0.1);
+    --shadow-bold: 4px 4px 0px hsl(var(--primary) / 0.2);
 
-    /* Minimal transitions */
-    --transition-smooth: all 0.2s ease-out;
+    /* Hand-drawn transitions */
+    --transition-sketch: all 0.15s ease-out;
   }
 }
 
