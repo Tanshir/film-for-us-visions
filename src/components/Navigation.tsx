@@ -7,14 +7,15 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Programs", href: "/programs" },
-    { name: "Projects", href: "/projects" },
-    { name: "Events", href: "/events" },
-    { name: "Contact", href: "/contact" },
-  ];
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Programs", href: "/programs" },
+  { name: "Projects", href: "/projects" },
+  { name: "Events", href: "/events" },
+  { name: "CIAWFF 2025", href: "/ciawff-2025" },
+  { name: "Contact", href: "/contact" },
+];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">

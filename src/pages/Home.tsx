@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Play, Camera, Users, Film, Heart, Lightbulb } from "lucide-react";
+import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const quickActions = [
@@ -21,6 +22,35 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       {/* Film Strip Header */}
       <div className="h-8 bg-film-strip border-b-4 border-primary"></div>
+      
+      {/* CIAWFF 2025 Notice */}
+      <section className="py-6 px-6 bg-primary/10 border-b-2 border-primary">
+        <div className="max-w-6xl mx-auto">
+          <Card className="border-4 border-primary shadow-bold bg-card">
+            <CardContent className="p-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 border-2 border-primary rounded-full flex items-center justify-center bg-primary text-primary-foreground">
+                    <Calendar className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">Exciting News!</h3>
+                    <p className="text-muted-foreground">
+                      The Chittagong International All Women Film Festival 2025 is coming soon.
+                    </p>
+                  </div>
+                </div>
+                <Link to="/ciawff-2025">
+                  <Button className="shadow-bold">
+                    Learn More & Submit
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
       
       {/* Hero Section - Hand-drawn inspired */}
       <section className="py-20 px-6 relative overflow-hidden">
