@@ -1,30 +1,52 @@
 import { Camera, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
-
 const Footer = () => {
-  const quickLinks = [
-    { name: "About", href: "#about" },
-    { name: "Programs", href: "#programs" },
-    { name: "Projects", href: "#projects" },
-    { name: "Events", href: "#events" },
-    { name: "Contact", href: "#contact" }
-  ];
-
-  const programs = [
-    { name: "Film Education", href: "#programs" },
-    { name: "Community Storytelling", href: "#programs" },
-    { name: "Youth Outreach", href: "#programs" },
-    { name: "Support Program", href: "#programs" }
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, name: "Facebook", url: "#" },
-    { icon: Instagram, name: "Instagram", url: "#" },
-    { icon: Youtube, name: "YouTube", url: "#" },
-    { icon: Twitter, name: "Twitter", url: "#" }
-  ];
-
-  return (
-    <footer className="bg-background border-t border-border">
+  const quickLinks = [{
+    name: "About",
+    href: "#about"
+  }, {
+    name: "Programs",
+    href: "#programs"
+  }, {
+    name: "Projects",
+    href: "#projects"
+  }, {
+    name: "Events",
+    href: "#events"
+  }, {
+    name: "Contact",
+    href: "#contact"
+  }];
+  const programs = [{
+    name: "Film Education",
+    href: "#programs"
+  }, {
+    name: "Community Storytelling",
+    href: "#programs"
+  }, {
+    name: "Youth Outreach",
+    href: "#programs"
+  }, {
+    name: "Support Program",
+    href: "#programs"
+  }];
+  const socialLinks = [{
+    icon: Facebook,
+    name: "Facebook",
+    url: "#"
+  }, {
+    icon: Instagram,
+    name: "Instagram",
+    url: "#"
+  }, {
+    icon: Youtube,
+    name: "YouTube",
+    url: "#"
+  }, {
+    icon: Twitter,
+    name: "Twitter",
+    url: "#"
+  }];
+  return <footer className="bg-background border-t border-border">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 gap-8">
@@ -41,16 +63,9 @@ const Footer = () => {
               the transformative power of storytelling and cinema.
             </p>
             <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:shadow-glow-spotlight flex items-center justify-center transition-all duration-300 group"
-                  aria-label={social.name}
-                >
+              {socialLinks.map(social => <a key={social.name} href={social.url} className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:shadow-glow-spotlight flex items-center justify-center transition-all duration-300 group" aria-label={social.name}>
                   <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors duration-300" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -58,16 +73,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors duration-300">
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -75,16 +85,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-6">Our Programs</h3>
             <ul className="space-y-3">
-              {programs.map((program) => (
-                <li key={program.name}>
-                  <a 
-                    href={program.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
+              {programs.map(program => <li key={program.name}>
+                  <a href={program.href} className="text-muted-foreground hover:text-primary transition-colors duration-300">
                     {program.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -96,14 +101,14 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-sm">hello@filmforus.org</p>
+                  <p className="text-sm">filmforus2020@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-sm">+1 (555) 123-4567</p>
+                  <p className="text-sm">01682-872271</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -139,8 +144,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
