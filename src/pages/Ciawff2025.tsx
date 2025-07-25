@@ -63,9 +63,11 @@ const Ciawff2025 = () => {
                 </Card>
               </div>
 
-              <Button size="lg" className="shadow-bold">
-                <FileText className="mr-2 h-5 w-5" />
-                Submit Your Film
+              <Button size="lg" className="shadow-bold" asChild>
+                <a href="https://forms.gle/YF9T4pXWMgzL3rnQA" target="_blank" rel="noopener noreferrer">
+                  <FileText className="mr-2 h-5 w-5" />
+                  Submit Your Film
+                </a>
               </Button>
             </div>
             
@@ -191,9 +193,11 @@ const Ciawff2025 = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Join us in celebrating women's voices in cinema. Submit your original work today!
             </p>
-            <Button size="lg" className="shadow-bold">
-              <FileText className="mr-2 h-5 w-5" />
-              Submit Your Film Now
+            <Button size="lg" className="shadow-bold" asChild>
+              <a href="https://forms.gle/YF9T4pXWMgzL3rnQA" target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 h-5 w-5" />
+                Submit Your Film Now
+              </a>
             </Button>
           </div>
         </div>
