@@ -71,12 +71,11 @@ const Ciawff2025 = () => {
             
             <div className="order-first lg:order-last">
               <div className="border-4 border-primary shadow-bold transform rotate-1 bg-card p-8">
-                <div className="aspect-square bg-muted/50 flex items-center justify-center">
-                  <div className="text-center">
-                    <Film className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-                    <p className="text-muted-foreground">CIAWFF 2025 Poster</p>
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/13602abb-dfaa-49c3-9988-2f3cae5562d7.png" 
+                  alt="CIAWFF 2025 Festival Poster" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
