@@ -58,10 +58,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold tracking-wider">FILM FOR US</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Democratizing film education and empowering communities through 
-              the transformative power of storytelling and cinema.
-            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">Film for Us aimed at socializing films among mass people. It aims to do so by educating mass people on films, by helping underprivileged people in pursuing film education, and covering their diverse stories by themselves through digital visual media.</p>
             <div className="flex gap-4">
               {socialLinks.map(social => <a key={social.name} href={social.url} className="w-10 h-10 rounded-full bg-muted hover:bg-primary hover:shadow-glow-spotlight flex items-center justify-center transition-all duration-300 group" aria-label={social.name}>
                   <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors duration-300" />
