@@ -64,7 +64,7 @@ const Events = () => {
       highlight: "50 participants, 200+ photos collected"
     },
     {
-      title: "Film Education Summit",
+      title: "Asian University for Women",
       date: "2024-04-20",
       description: "Regional gathering of educators discussing community-based film education methodologies.",
       highlight: "Attendees from 12 organizations"
