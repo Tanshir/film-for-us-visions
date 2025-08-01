@@ -12,6 +12,7 @@ const navItems = [
   { name: "About", href: "/about" },
   { name: "Programs", href: "/programs" },
   { name: "Projects", href: "/projects" },
+  { name: "Our Films", href: "/our-films" },
   { name: "Citizen Filmmaking", href: "/citizen-filmmaking" },
   { name: "Workshops", href: "/workshops" },
   { name: "Events", href: "/events" },

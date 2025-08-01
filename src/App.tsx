@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +13,7 @@ import Events from "./pages/Events";
 import Ciawff2025 from "./pages/Ciawff2025";
 import CitizenFilmmaking from "./pages/CitizenFilmmaking";
 import Workshops from "./pages/Workshops";
+import OurFilms from "./pages/OurFilms";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +37,7 @@ const App = () => (
               <Route path="/ciawff-2025" element={<Ciawff2025 />} />
               <Route path="/citizen-filmmaking" element={<CitizenFilmmaking />} />
               <Route path="/workshops" element={<Workshops />} />
+              <Route path="/our-films" element={<OurFilms />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
