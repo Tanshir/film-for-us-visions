@@ -1,7 +1,8 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,11 @@ const navItems = [
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <Camera className="w-4 h-4 text-primary-foreground" />
-            </div>
+            <img 
+              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
+              alt="Film For Us Logo" 
+              className="w-12 h-12 object-contain"
+            />
             <span className="text-xl font-bold tracking-wider">FILM FOR US</span>
           </Link>
 

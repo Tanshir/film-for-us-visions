@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Play, Camera, Users } from "lucide-react";
+import { Play, Users } from "lucide-react";
 import heroImage from "@/assets/hero-cinema.jpg";
 
 const Hero = () => {
@@ -24,9 +25,11 @@ const Hero = () => {
         {/* Logo/Brand */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-spotlight flex items-center justify-center shadow-glow-spotlight">
-              <Camera className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img 
+              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
+              alt="Film For Us Logo" 
+              className="w-16 h-16 object-contain bg-white/90 rounded-lg p-2 shadow-glow-spotlight"
+            />
             <h1 className="text-4xl md:text-6xl font-bold tracking-wider">
               FILM FOR US
             </h1>

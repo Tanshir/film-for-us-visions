@@ -1,4 +1,5 @@
-import { Camera, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 const Footer = () => {
   const quickLinks = [{
     name: "About",
@@ -53,9 +54,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gradient-spotlight flex items-center justify-center shadow-glow-spotlight">
-                <Camera className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img 
+                src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
+                alt="Film For Us Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-xl font-bold tracking-wider">FILM FOR US</span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">Film for Us aimed at socializing films among mass people. It aims to do so by educating mass people on films, by helping underprivileged people in pursuing film education, and covering their diverse stories by themselves through digital visual media.</p>
