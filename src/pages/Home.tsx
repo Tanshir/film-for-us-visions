@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight } from "lucide-react";
+import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight, Clock, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -42,6 +43,420 @@ const Home = () => {
               Don't miss this incredible celebration of women's voices in cinema. 
               Mark your calendars for September 4-5, 2025!
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Festival Schedule Section */}
+      <section className="py-16 px-6 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Festival Schedule</h2>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                <span>September 4-5, 2025</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <span>Alliance Française de Chittagong</span>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Presented by CONNECTHER • Co-organized by Film For Us, New View Club, and AUW Film Club
+            </p>
+          </div>
+
+          {/* Day 1 Schedule */}
+          <div className="mb-12">
+            <Card className="border-4 border-primary shadow-bold transform -rotate-1 mb-8">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <Calendar className="w-6 h-6" />
+                  Day 1: September 4th, 2025
+                </h3>
+                
+                {/* Opening Ceremony */}
+                <div className="mb-6 p-4 bg-muted/20 rounded-lg border-2 border-primary/20">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">4:00 pm - 5:00 pm</span>
+                  </div>
+                  <h4 className="text-lg font-bold">Opening Ceremony</h4>
+                </div>
+
+                {/* First Session */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">5:00 pm - 6:15 pm: Competition Films</span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Movie</TableHead>
+                          <TableHead>Director</TableHead>
+                          <TableHead>Category</TableHead>
+                          <TableHead>Duration</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">Sila... The Pain of Flying</TableCell>
+                          <TableCell>Nayanee Borogohain</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>13 min 1 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Pottery - A Forgotten Art</TableCell>
+                          <TableCell>Progiya Paromita Das</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>8 min 17 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">4th Floor</TableCell>
+                          <TableCell>Fabilha Sumaita Hasan</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>9 min 23 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">The Bedridden</TableCell>
+                          <TableCell>Suraya Rahman</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>19 min 59 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Colors of Hope</TableCell>
+                          <TableCell>Mrittika Rashed</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>2 min 29 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">From Level 3</TableCell>
+                          <TableCell>Nabila Anjum</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>10 min 30 sec</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+
+                {/* Second Session */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">6:30 pm - 7:45 pm: Competition Films</span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Movie</TableHead>
+                          <TableHead>Director</TableHead>
+                          <TableHead>Category</TableHead>
+                          <TableHead>Duration</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">When Light Fades Away</TableCell>
+                          <TableCell>Mallika Roy</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>10 min 23 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Flower Boy in DC Hills Park</TableCell>
+                          <TableCell>Eurosia Gutierres Pereira</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>8 min 18 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">No Face</TableCell>
+                          <TableCell>Tasnum Shobnam</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>2 min 25 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">The Veveless Wallet</TableCell>
+                          <TableCell>Suha Mehnaz Ahmed</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>7 min 2 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Blank Texts</TableCell>
+                          <TableCell>Maliha Maliyat</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>1 min 33 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Against The Rubble</TableCell>
+                          <TableCell>Gulzar Nayani</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>20 min 32 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Ek Rater Upakhyan</TableCell>
+                          <TableCell>Maisha Maliha Mou, Mehfuza Binta Rashid Moon, Noor-A-Jannat, Madhury Debnath</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>12 min 22 sec</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Day 2 Schedule */}
+          <div>
+            <Card className="border-4 border-primary shadow-bold transform rotate-1">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <Calendar className="w-6 h-6" />
+                  Day 2: September 5th, 2025
+                </h3>
+                
+                {/* ConnectHER Films */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">11:00 am - 12:30 pm: ConnectHER Films</span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Movie</TableHead>
+                          <TableHead>Director</TableHead>
+                          <TableHead>Category</TableHead>
+                          <TableHead>Duration</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">In A Moment Breaker</TableCell>
+                          <TableCell>Asil Majed AlWadiya</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 31 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">The Chain</TableCell>
+                          <TableCell>Muhammad Waseem</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>5 min 54 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">We Could Be Champion Too</TableCell>
+                          <TableCell>Novera Hasan Nikkon</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>5 min 56 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">The Sand Game</TableCell>
+                          <TableCell>Suraj Kantuwal and Mira Khadka</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>6 min 54 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">One Step Forward</TableCell>
+                          <TableCell>Rita Xiang</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>6 min 4 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Asma</TableCell>
+                          <TableCell>Pooja Khati</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 42 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Diversity Hire</TableCell>
+                          <TableCell>Aiko Lozar</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>5 min 58 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Al Maram</TableCell>
+                          <TableCell>Huda Lulu and Ahmed Younis</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 17 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Grit and Glitter</TableCell>
+                          <TableCell>Adnida Qrana Zahra Faizah Rokhmah, Rahma Attaya Syakira, and Akriya Zhafira</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 44 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">And That's On Period</TableCell>
+                          <TableCell>Tinayeishe Wakalama</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>6 min 01 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Professional Football Team</TableCell>
+                          <TableCell>Anonymous</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>3 min 8 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Mother's Football Team</TableCell>
+                          <TableCell>Prince Kumar</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 24 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Kharbasha Behind The Horizon</TableCell>
+                          <TableCell>Nader Alrozzi, Samir El Souissi, and Barea El Whady</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>3 min 35 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Aguan-Sun Behind The Horizon</TableCell>
+                          <TableCell>Novera Hasan Nikkon</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 31 sec</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">The Ripple Effect</TableCell>
+                          <TableCell>Sarah Jehaan Khan</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>5 min 43 sec</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+
+                {/* Palestinian Film Screenings */}
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">3:00 pm - 4:20 pm: Palestinian Film Screening and Director's Talk</span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Movie</TableHead>
+                          <TableHead>Director</TableHead>
+                          <TableHead>Category</TableHead>
+                          <TableHead>Duration</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">25 Kilometers</TableCell>
+                          <TableCell>Nahed Awwad</TableCell>
+                          <TableCell>Biography</TableCell>
+                          <TableCell>16 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Electrical Gaza</TableCell>
+                          <TableCell>Rosalind Nashashibi</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>18 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">O. Persecuted</TableCell>
+                          <TableCell>Basel Mansour</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>2 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">One Minute</TableCell>
+                          <TableCell>Dina Naser</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>11 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Children Without Childhood</TableCell>
+                          <TableCell>Khadijeh Habashneh</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>22 min</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Clock className="w-4 h-4" />
+                    <span className="font-semibold">4:40 pm - 5:50 pm: Palestinian Film Screening and Director's Talk</span>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Movie</TableHead>
+                          <TableHead>Director</TableHead>
+                          <TableHead>Category</TableHead>
+                          <TableHead>Duration</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell className="font-medium">The White Elephant</TableCell>
+                          <TableCell>Shuruq Harb</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>12 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Wahdon</TableCell>
+                          <TableCell>Norma Marcos</TableCell>
+                          <TableCell>Documentary and Fiction</TableCell>
+                          <TableCell>11 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">This Home Is Ours</TableCell>
+                          <TableCell>Shayma' Awadiyah</TableCell>
+                          <TableCell>Documentary</TableCell>
+                          <TableCell>21 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Nightmare of Gaza</TableCell>
+                          <TableCell>Farah Nabulsi</TableCell>
+                          <TableCell>Short Film</TableCell>
+                          <TableCell>13 min</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell className="font-medium">Today They Took My Son</TableCell>
+                          <TableCell>Farah Nabulsi</TableCell>
+                          <TableCell>Fiction</TableCell>
+                          <TableCell>8 min</TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+
+                {/* Final Events */}
+                <div className="space-y-4">
+                  <div className="p-4 bg-muted/20 rounded-lg border-2 border-primary/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="w-4 h-4" />
+                      <span className="font-semibold">6:00 pm - 6:30 pm</span>
+                    </div>
+                    <h4 className="text-lg font-bold">Cultural Programme by AUW Students</h4>
+                  </div>
+                  
+                  <div className="p-4 bg-primary/10 rounded-lg border-2 border-primary/40">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="w-4 h-4" />
+                      <span className="font-semibold">6:30 pm - 7:30 pm</span>
+                    </div>
+                    <h4 className="text-lg font-bold flex items-center gap-2">
+                      <Film className="w-5 h-5" />
+                      Award Giving Ceremony
+                    </h4>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
