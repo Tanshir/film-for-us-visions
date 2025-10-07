@@ -2,7 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CalendarDays, MapPin, Trophy, Users, FileText, Clock, Film } from "lucide-react";
 import { Link } from "react-router-dom";
-// Featured image will be added when available
+import ciawffAwards from "@/assets/ciawff-awards.jpg";
+import ciawffGroup from "@/assets/ciawff-group.jpg";
+import ciawffPresentation from "@/assets/ciawff-presentation.jpg";
 
 const Ciawff2025 = () => {
   const categories = [
@@ -335,6 +337,124 @@ const Ciawff2025 = () => {
                     <h4 className="text-lg font-bold">Award Giving Ceremony</h4>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Award Giving Ceremony */}
+      <section className="py-16 px-6 bg-primary/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <Trophy className="w-16 h-16 mx-auto mb-4 text-primary" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Award Giving Ceremony</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Celebrating the exceptional talent and creativity of women filmmakers who brought powerful stories to life. 
+              The awards ceremony honored the best films across fiction and documentary categories.
+            </p>
+          </div>
+
+          {/* Award Winners */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-4 border-primary shadow-bold transform -rotate-1">
+              <CardHeader className="bg-primary/10">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <Trophy className="w-6 h-6 text-primary" />
+                  Best Fiction
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-2">When Light Fades Away</h3>
+                <p className="text-muted-foreground mb-4">
+                  <span className="font-semibold">Director:</span> Mallika Roy
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  A compelling fictional narrative that captivated audiences with its powerful storytelling 
+                  and emotional depth, showcasing the director's exceptional vision and craft.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-4 border-primary shadow-bold transform rotate-1">
+              <CardHeader className="bg-primary/10">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <Trophy className="w-6 h-6 text-primary" />
+                  Best Documentary
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold mb-2">Against The Rubble</h3>
+                <p className="text-muted-foreground mb-4">
+                  <span className="font-semibold">Director:</span> Gulzar Nayani
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  A powerful documentary that shed light on important stories with authenticity and courage, 
+                  demonstrating remarkable documentary filmmaking excellence.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Event Photos */}
+          <div className="space-y-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-2">Festival Highlights</h3>
+              <p className="text-muted-foreground">Moments from the award ceremony and festival celebrations</p>
+            </div>
+
+            {/* Award Trophies Image */}
+            <div className="relative">
+              <img 
+                src={ciawffAwards} 
+                alt="Best Fiction and Best Documentary Award Trophies - CIAWFF 2025"
+                className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
+              />
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  The prestigious CIAWFF 2025 award trophies for Best Fiction and Best Documentary
+                </p>
+              </div>
+            </div>
+
+            {/* Group Photo */}
+            <div className="relative">
+              <img 
+                src={ciawffGroup} 
+                alt="CIAWFF 2025 Festival Participants and Organizers Group Photo"
+                className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
+              />
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Festival participants, filmmakers, organizers, and distinguished guests celebrating together
+                </p>
+              </div>
+            </div>
+
+            {/* Award Presentation Photo */}
+            <div className="relative">
+              <img 
+                src={ciawffPresentation} 
+                alt="Award Presentation Ceremony at CIAWFF 2025"
+                className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
+              />
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Award presentation moment honoring the exceptional filmmakers
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Congratulations Message */}
+          <div className="mt-12 text-center">
+            <Card className="border-4 border-primary shadow-bold bg-primary/5">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Congratulations to All Winners!</h3>
+                <p className="text-lg text-muted-foreground">
+                  Thank you to all the talented filmmakers who participated and shared their incredible stories. 
+                  Your contributions made CIAWFF 2025 a memorable celebration of women's voices in cinema.
+                </p>
               </CardContent>
             </Card>
           </div>
