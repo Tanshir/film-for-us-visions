@@ -57,6 +57,16 @@ const Home = () => {
                 </Link>
               </Button>
             </div>
+
+            <div className="mt-8 pt-6 border-t-2 border-dashed border-primary/40">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Clock className="w-4 h-4 text-primary" />
+                <p className="text-xs md:text-sm font-bold tracking-wider uppercase">
+                  Submission Deadline · August 01, 2026
+                </p>
+              </div>
+              <CountdownTimer targetDate={SUBMISSION_DEADLINE} compact />
+            </div>
           </div>
         </div>
       </section>
