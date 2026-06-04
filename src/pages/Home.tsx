@@ -3,6 +3,9 @@ import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight, Cloc
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
+import CountdownTimer from "@/components/CountdownTimer";
+
+const SUBMISSION_DEADLINE = "2026-08-01T23:59:59";
 
 const Home = () => {
   const quickActions = [
