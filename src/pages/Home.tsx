@@ -3,6 +3,9 @@ import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight, Cloc
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
+import CountdownTimer from "@/components/CountdownTimer";
+
+const SUBMISSION_DEADLINE = "2026-08-01T23:59:59";
 
 const Home = () => {
   const quickActions = [
@@ -53,6 +56,16 @@ const Home = () => {
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+            </div>
+
+            <div className="mt-8 pt-6 border-t-2 border-dashed border-primary/40">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Clock className="w-4 h-4 text-primary" />
+                <p className="text-xs md:text-sm font-bold tracking-wider uppercase">
+                  Submission Deadline · August 01, 2026
+                </p>
+              </div>
+              <CountdownTimer targetDate={SUBMISSION_DEADLINE} compact />
             </div>
           </div>
         </div>

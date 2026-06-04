@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, MapPin, Film, Award, Globe, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Film, Award, Globe, ArrowRight, Clock } from "lucide-react";
 import poster from "@/assets/ciawff-2026-poster.png.asset.json";
+import CountdownTimer from "@/components/CountdownTimer";
+
+const SUBMISSION_DEADLINE = "2026-08-01T23:59:59";
 
 const Ciawff2026 = () => {
   return (
@@ -21,6 +24,17 @@ const Ciawff2026 = () => {
             <p className="text-lg md:text-xl text-muted-foreground italic">
               From Vision to Screen — Celebrating Women's Voices Through Cinema
             </p>
+          </div>
+
+          {/* Countdown to Submission Deadline */}
+          <div className="mb-10 border-4 border-primary bg-card shadow-bold p-6 md:p-8">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Clock className="w-5 h-5 text-primary" />
+              <p className="text-sm md:text-base font-bold tracking-wider uppercase">
+                Submission Deadline · August 01, 2026
+              </p>
+            </div>
+            <CountdownTimer targetDate={SUBMISSION_DEADLINE} />
           </div>
 
           <div className="border-4 border-primary shadow-bold overflow-hidden bg-card">
