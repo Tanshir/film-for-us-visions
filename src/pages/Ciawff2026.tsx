@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, MapPin, Film, Award, Globe, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Film, Award, Globe, ArrowRight, Clock } from "lucide-react";
 import poster from "@/assets/ciawff-2026-poster.png.asset.json";
+import CountdownTimer from "@/components/CountdownTimer";
+
+const SUBMISSION_DEADLINE = "2026-08-01T23:59:59";
 
 const Ciawff2026 = () => {
   return (
