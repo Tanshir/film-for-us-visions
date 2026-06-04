@@ -26,6 +26,17 @@ const Ciawff2026 = () => {
             </p>
           </div>
 
+          {/* Countdown to Submission Deadline */}
+          <div className="mb-10 border-4 border-primary bg-card shadow-bold p-6 md:p-8">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Clock className="w-5 h-5 text-primary" />
+              <p className="text-sm md:text-base font-bold tracking-wider uppercase">
+                Submission Deadline · August 01, 2026
+              </p>
+            </div>
+            <CountdownTimer targetDate={SUBMISSION_DEADLINE} />
+          </div>
+
           <div className="border-4 border-primary shadow-bold overflow-hidden bg-card">
             <img
               src={poster.url}
