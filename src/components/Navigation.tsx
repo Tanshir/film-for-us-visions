@@ -27,6 +27,7 @@ const watchItems = [
 
 const eventsItems = [
   { name: "Events", href: "/events", icon: Calendar },
+  { name: "CIAWFF 2026", href: "/ciawff-2026", icon: Film },
   { name: "CIAWFF 2025", href: "/ciawff-2025", icon: Film },
 ];
 

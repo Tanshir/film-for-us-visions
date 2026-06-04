@@ -23,6 +23,41 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       {/* Film Strip Header */}
       <div className="h-8 bg-film-strip border-b-4 border-primary"></div>
+
+      {/* CIAWFF 2026 Announcement */}
+      <section className="py-12 px-6 bg-muted/20 border-b-4 border-primary">
+        <div className="max-w-5xl mx-auto">
+          <div className="border-4 border-primary bg-card shadow-bold p-6 md:p-10 transform -rotate-1">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0 w-20 h-20 border-4 border-primary rounded-full flex items-center justify-center bg-primary/10">
+                <Film className="w-10 h-10 text-primary" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-block px-3 py-1 text-xs font-bold tracking-wider bg-primary text-primary-foreground mb-2">
+                  NOW OPEN · SUBMISSIONS
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                  CIAWFF 2026 — Call for Submissions
+                </h2>
+                <p className="text-muted-foreground mb-1">
+                  2nd Chittagong International All Women Film Festival
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <Calendar className="inline w-4 h-4 mr-1" /> September 17–19, 2026
+                  <span className="mx-2">·</span>
+                  <MapPin className="inline w-4 h-4 mr-1" /> Alliance Française de Chittagong
+                </p>
+              </div>
+              <Button asChild size="lg" className="shadow-bold">
+                <Link to="/ciawff-2026">
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       
       
       {/* Hero Section - Hand-drawn inspired */}
