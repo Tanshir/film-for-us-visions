@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Programs from "./pages/Programs";
 import Projects from "./pages/Projects";
-import Events from "./pages/Events";
+
 import Ciawff2025 from "./pages/Ciawff2025";
 import Ciawff2026 from "./pages/Ciawff2026";
 import CitizenFilmmaking from "./pages/CitizenFilmmaking";
