@@ -1,11 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight, Clock, MapPin } from "lucide-react";
+import { Play, Camera, Users, Film, Heart, Lightbulb, Calendar, ArrowRight, Clock, MapPin, Award, Globe, MessageSquare } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
 import CountdownTimer from "@/components/CountdownTimer";
+import poster from "@/assets/ciawff-2026-poster.png.asset.json";
 
 const SUBMISSION_DEADLINE = "2026-08-01T23:59:59";
+
+const ciawffRules = [
+  "Films must be directed by women filmmakers.",
+  "Films completed after July 1, 2024 are eligible for submission.",
+  "Films may be fiction, documentary, experimental, animation, or hybrid forms.",
+  "Films must not be publicly available online before the festival screening.",
+  "No submission fee.",
+  "Applicants must hold the necessary rights to submit and screen the film.",
+  "Exhibition copies must be provided in high-quality digital format (MP4 or MOV).",
+  "All films must include English subtitles if the original language is not English.",
+  "The festival reserves the right to accept or decline any submission.",
+  "Selected filmmakers will be notified via email.",
+  "The festival does not pay screening fees for selected films.",
+  "Chittagong International All Women Film Festival (CIAWFF) holds the right to use the selected films for trailers and publicity usage.",
+];
 
 const Home = () => {
   const quickActions = [
