@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Programs from "./pages/Programs";
 import Projects from "./pages/Projects";
-import Events from "./pages/Events";
+
 import Ciawff2025 from "./pages/Ciawff2025";
 import Ciawff2026 from "./pages/Ciawff2026";
 import CitizenFilmmaking from "./pages/CitizenFilmmaking";
@@ -34,7 +34,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/programs" element={<Programs />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/events" element={<Events />} />
+              
               <Route path="/ciawff-2025" element={<Ciawff2025 />} />
               <Route path="/ciawff-2026" element={<Ciawff2026 />} />
               <Route path="/citizen-filmmaking" element={<CitizenFilmmaking />} />
