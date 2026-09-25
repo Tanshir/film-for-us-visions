@@ -3,7 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CalendarDays, MapPin, Trophy, Users, FileText, Clock, Film } from "lucide-react";
 import { Link } from "react-router-dom";
 import ciawffAwards from "@/assets/ciawff-awards.jpg";
+import ciawffAwardsMobile from "@/assets/ciawff-awards-mobile.jpg";
 import ciawffGroup from "@/assets/ciawff-group.jpg";
+import ciawffGroupMobile from "@/assets/ciawff-group-mobile.jpg";
 import ciawffPresentation from "@/assets/ciawff-presentation.jpg";
 
 const Ciawff2025 = () => {
@@ -29,7 +31,7 @@ const Ciawff2025 = () => {
     <div className="min-h-screen bg-background">
       {/* Film Strip Header */}
       <div className="h-8 bg-film-strip border-b-4 border-primary"></div>
-      
+
       {/* Hero Section with Event Recap */}
       <section className="py-12 px-6">
         <div className="max-w-6xl mx-auto">
@@ -41,15 +43,15 @@ const Ciawff2025 = () => {
               <div className="border-l-4 border-primary pl-4 mb-8 bg-muted/20 p-4 rounded-r-lg">
                 <p className="text-lg font-semibold text-primary mb-2">Event Completed Successfully!</p>
                 <p className="text-muted-foreground">
-                  Thank you to everyone who joined us for this historic celebration of women's voices in cinema. 
+                  Thank you to everyone who joined us for this historic celebration of women's voices in cinema.
                   Relive the magic and explore what made this festival special.
                 </p>
               </div>
               <p className="text-lg text-muted-foreground mb-8">
-                The first-of-its-kind film festival in Bangladesh dedicated to showcasing and 
+                The first-of-its-kind film festival in Bangladesh dedicated to showcasing and
                 celebrating the works of female filmmakers.
               </p>
-              
+
               {/* Key Info Cards */}
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 <Card className="border-2 shadow-sketch">
@@ -61,7 +63,7 @@ const Ciawff2025 = () => {
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border-2 shadow-sketch">
                   <CardContent className="p-4 flex items-center gap-3">
                     <MapPin className="w-6 h-6 flex-shrink-0" />
@@ -80,12 +82,14 @@ const Ciawff2025 = () => {
                 </a>
               </Button>
             </div>
-            
+
             <div className="order-first lg:order-last">
               <div className="border-4 border-primary shadow-bold transform rotate-1 bg-card p-8">
-                <img 
-                  src="/lovable-uploads/13602abb-dfaa-49c3-9988-2f3cae5562d7.png" 
-                  alt="CIAWFF 2025 Festival Poster" 
+                <img
+                  src="/lovable-uploads/13602abb-dfaa-49c3-9988-2f3cae5562d7.jpg"
+                  alt="CIAWFF 2025 Festival Poster"
+                  width={800}
+                  height={1132}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -105,9 +109,12 @@ const Ciawff2025 = () => {
               A look back at the poster and schedule that brought us together for this incredible celebration.
             </p>
             <div className="relative inline-block">
-              <img 
-                src="/lovable-uploads/87ac8c06-fa7e-4b31-ae66-ac1282896091.png" 
+              <img
+                src="/lovable-uploads/87ac8c06-fa7e-4b31-ae66-ac1282896091.jpg"
                 alt="Chittagong International All Women Film Festival 2025 - September 4-5, Alliance Française de Chittagong"
+                width={800}
+                height={1128}
+                loading="lazy"
                 className="w-full max-w-2xl mx-auto rounded-lg shadow-bold border-2 border-primary/20 hover:shadow-xl transition-all duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent rounded-lg pointer-events-none"></div>
@@ -150,7 +157,7 @@ const Ciawff2025 = () => {
                   <CalendarDays className="w-6 h-6" />
                   Day 1: September 4th, 2025
                 </h3>
-                
+
                 {/* Opening Ceremony */}
                 <div className="mb-6 p-4 bg-muted/20 rounded-lg border-2 border-primary/20">
                   <div className="flex items-center gap-2 mb-2">
@@ -228,7 +235,7 @@ const Ciawff2025 = () => {
                   <CalendarDays className="w-6 h-6" />
                   Day 2: September 5th, 2025
                 </h3>
-                
+
                 {/* ConnectHER Films */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -350,7 +357,7 @@ const Ciawff2025 = () => {
             <Trophy className="w-16 h-16 mx-auto mb-4 text-primary" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Award Giving Ceremony</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Celebrating the exceptional talent and creativity of women filmmakers who brought powerful stories to life. 
+              Celebrating the exceptional talent and creativity of women filmmakers who brought powerful stories to life.
               The awards ceremony honored the best films across fiction and documentary categories.
             </p>
           </div>
@@ -370,7 +377,7 @@ const Ciawff2025 = () => {
                   <span className="font-semibold">Director:</span> Mallika Roy
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  A compelling fictional narrative that captivated audiences with its powerful storytelling 
+                  A compelling fictional narrative that captivated audiences with its powerful storytelling
                   and emotional depth, showcasing the director's exceptional vision and craft.
                 </p>
               </CardContent>
@@ -389,7 +396,7 @@ const Ciawff2025 = () => {
                   <span className="font-semibold">Director:</span> Gulzar Nayani
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  A powerful documentary that shed light on important stories with authenticity and courage, 
+                  A powerful documentary that shed light on important stories with authenticity and courage,
                   demonstrating remarkable documentary filmmaking excellence.
                 </p>
               </CardContent>
@@ -405,9 +412,14 @@ const Ciawff2025 = () => {
 
             {/* Award Trophies Image */}
             <div className="relative">
-              <img 
-                src={ciawffAwards} 
+              <img
+                src={ciawffAwards}
+                srcSet={`${ciawffAwardsMobile} 800w, ${ciawffAwards} 1600w`}
+                sizes="(max-width: 1024px) 100vw, 1152px"
                 alt="Best Fiction and Best Documentary Award Trophies - CIAWFF 2025"
+                width={1600}
+                height={1066}
+                loading="lazy"
                 className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
               />
               <div className="mt-4 text-center">
@@ -419,9 +431,14 @@ const Ciawff2025 = () => {
 
             {/* Group Photo */}
             <div className="relative">
-              <img 
-                src={ciawffGroup} 
+              <img
+                src={ciawffGroup}
+                srcSet={`${ciawffGroupMobile} 800w, ${ciawffGroup} 1184w`}
+                sizes="(max-width: 1024px) 100vw, 1152px"
                 alt="CIAWFF 2025 Festival Participants and Organizers Group Photo"
+                width={1184}
+                height={864}
+                loading="lazy"
                 className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
               />
               <div className="mt-4 text-center">
@@ -433,9 +450,12 @@ const Ciawff2025 = () => {
 
             {/* Award Presentation Photo */}
             <div className="relative">
-              <img 
-                src={ciawffPresentation} 
+              <img
+                src={ciawffPresentation}
                 alt="Award Presentation Ceremony at CIAWFF 2025"
+                width={736}
+                height={1000}
+                loading="lazy"
                 className="w-full rounded-lg shadow-bold border-4 border-primary/20 hover:shadow-xl transition-all duration-300"
               />
               <div className="mt-4 text-center">
@@ -452,7 +472,7 @@ const Ciawff2025 = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Congratulations to All Winners!</h3>
                 <p className="text-lg text-muted-foreground">
-                  Thank you to all the talented filmmakers who participated and shared their incredible stories. 
+                  Thank you to all the talented filmmakers who participated and shared their incredible stories.
                   Your contributions made CIAWFF 2025 a memorable celebration of women's voices in cinema.
                 </p>
               </CardContent>
@@ -465,14 +485,14 @@ const Ciawff2025 = () => {
       <section className="py-16 px-6 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">About the Festival</h2>
-          
+
           <div className="border-4 border-primary bg-card p-8 shadow-bold transform -rotate-1 mb-12">
             <p className="text-lg leading-relaxed">
-              The Chittagong International All Women Film Festival 2025 (CIAWFF 2025) is a groundbreaking 
-              initiative, set to be the first-of-its-kind film festival in Bangladesh dedicated to showcasing and 
-              celebrating the works of female filmmakers scheduled for September 04-06 at Alliance 
-              Française de Chittagong. Co-organized by Film for Us and AUW Film Club, and presented by 
-              ConnectHER, this prestigious event aims to empower women in cinema, providing a platform 
+              The Chittagong International All Women Film Festival 2025 (CIAWFF 2025) is a groundbreaking
+              initiative, set to be the first-of-its-kind film festival in Bangladesh dedicated to showcasing and
+              celebrating the works of female filmmakers scheduled for September 04-06 at Alliance
+              Française de Chittagong. Co-organized by Film for Us and AUW Film Club, and presented by
+              ConnectHER, this prestigious event aims to empower women in cinema, providing a platform
               for independent female voices from around the world.
             </p>
           </div>
@@ -486,7 +506,7 @@ const Ciawff2025 = () => {
                 <p className="text-sm">Film for Us & AUW Film Club</p>
               </CardContent>
             </Card>
-            
+
             <Card className="border-2 shadow-sketch">
               <CardContent className="p-6">
                 <Trophy className="w-12 h-12 mx-auto mb-4" />
@@ -494,7 +514,7 @@ const Ciawff2025 = () => {
                 <p className="text-sm">ConnectHER</p>
               </CardContent>
             </Card>
-            
+
             <Card className="border-2 shadow-sketch">
               <CardContent className="p-6">
                 <MapPin className="w-12 h-12 mx-auto mb-4" />
@@ -510,7 +530,7 @@ const Ciawff2025 = () => {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Competition Categories</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {categories.map((category) => (
               <Card key={category.title} className="border-2 shadow-sketch">
@@ -533,7 +553,7 @@ const Ciawff2025 = () => {
 
           <div className="text-center">
             <p className="text-lg mb-6">
-              A distinguished group of jury will evaluate the entries based on artistic merit, 
+              A distinguished group of jury will evaluate the entries based on artistic merit,
               creativity, and technical excellence. Entries must be directed by women filmmakers.
             </p>
           </div>
@@ -544,7 +564,7 @@ const Ciawff2025 = () => {
       <section className="py-16 px-6 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Rules and Regulations</h2>
-          
+
           <Card className="border-4 border-primary shadow-bold">
             <CardContent className="p-8">
               <div className="space-y-4">
@@ -568,7 +588,7 @@ const Ciawff2025 = () => {
           <div className="border-4 border-primary bg-card p-8 shadow-bold transform rotate-1">
             <h2 className="text-3xl font-bold mb-6">Festival Legacy</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Thank you to all the incredible filmmakers who participated in making CIAWFF 2025 a historic success. 
+              Thank you to all the incredible filmmakers who participated in making CIAWFF 2025 a historic success.
               This festival has paved the way for future celebrations of women's voices in cinema.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
