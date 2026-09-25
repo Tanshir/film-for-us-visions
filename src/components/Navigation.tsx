@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,31 +8,30 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-];
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+  ];
 
-const learnItems = [
-  { name: "Programs", href: "/programs", icon: Users },
-  { name: "Workshops", href: "/workshops", icon: Play },
-  { name: "Citizen Filmmaking", href: "/citizen-filmmaking", icon: Camera },
-];
+  const learnItems = [
+    { name: "Programs", href: "/programs", icon: Users },
+    { name: "Workshops", href: "/workshops", icon: Play },
+    { name: "Citizen Filmmaking", href: "/citizen-filmmaking", icon: Camera },
+  ];
 
-const watchItems = [
-  { name: "Our Films", href: "/our-films", icon: Film },
-  { name: "Projects", href: "/projects", icon: Users },
-];
+  const watchItems = [
+    { name: "Our Films", href: "/our-films", icon: Film },
+    { name: "Projects", href: "/projects", icon: Users },
+  ];
 
-const eventsItems = [
-  
-  { name: "CIAWFF 2026", href: "/ciawff-2026", icon: Film },
-  { name: "CIAWFF 2025", href: "/ciawff-2025", icon: Film },
-];
+  const eventsItems = [
+    { name: "CIAWFF 2026", href: "/ciawff-2026", icon: Film },
+    { name: "CIAWFF 2025", href: "/ciawff-2025", icon: Film },
+  ];
 
-const singleItems = [
-  { name: "Contact", href: "/contact" },
-];
+  const singleItems = [
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
@@ -41,9 +39,11 @@ const singleItems = [
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img 
-              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
-              alt="Film For Us Logo" 
+            <img
+              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png"
+              alt="Film For Us Logo"
+              width={48}
+              height={48}
               className="w-12 h-12 object-contain"
             />
             <span className="text-xl font-bold tracking-wider">FILM FOR US</span>
@@ -188,7 +188,7 @@ const singleItems = [
                 {item.name}
               </Link>
             ))}
-            
+
             {/* Learn Section */}
             <div className="pt-2">
               <div className="px-3 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Learn</div>
@@ -262,7 +262,7 @@ const singleItems = [
                 {item.name}
               </Link>
             ))}
-            
+
             <div className="px-3 py-2">
               <Button className="w-full">
                 Get Involved
