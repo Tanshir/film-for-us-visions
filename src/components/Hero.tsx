@@ -1,16 +1,21 @@
-
 import { Button } from "@/components/ui/button";
 import { Play, Users } from "lucide-react";
 import heroImage from "@/assets/hero-cinema.jpg";
+import heroImageMobile from "@/assets/hero-cinema-mobile.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Film For Us - Independent Cinema" 
+        <img
+          src={heroImage}
+          srcSet={`${heroImageMobile} 800w, ${heroImage} 1920w`}
+          sizes="100vw"
+          alt="Film For Us - Independent Cinema"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
@@ -25,9 +30,11 @@ const Hero = () => {
         {/* Logo/Brand */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
-            <img 
-              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
-              alt="Film For Us Logo" 
+            <img
+              src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png"
+              alt="Film For Us Logo"
+              width={64}
+              height={64}
               className="w-16 h-16 object-contain bg-white/90 rounded-lg p-2 shadow-glow-spotlight"
             />
             <h1 className="text-4xl md:text-6xl font-bold tracking-wider">
@@ -46,22 +53,22 @@ const Hero = () => {
         </h2>
 
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Educating communities through cinema, empowering underprivileged voices, 
+          Educating communities through cinema, empowering underprivileged voices,
           and telling diverse stories through digital visual media.
         </p>
 
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-gradient-spotlight hover:shadow-glow-spotlight transition-all duration-500 text-lg px-8 py-6"
           >
             <Play className="mr-2 h-5 w-5" />
             Watch Our Stories
           </Button>
-          
-          <Button 
-            variant="secondary" 
+
+          <Button
+            variant="secondary"
             size="lg"
             className="border-primary/50 hover:border-primary hover:shadow-glow-accent transition-all duration-500 text-lg px-8 py-6"
           >
