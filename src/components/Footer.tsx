@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 const Footer = () => {
   const quickLinks = [{
@@ -54,9 +53,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img 
-                src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png" 
-                alt="Film For Us Logo" 
+              <img
+                src="/lovable-uploads/2fe75908-8a91-4b15-808a-f72594532869.png"
+                alt="Film For Us Logo"
+                width={40}
+                height={40}
+                loading="lazy"
                 className="w-10 h-10 object-contain"
               />
               <span className="text-xl font-bold tracking-wider">FILM FOR US</span>
