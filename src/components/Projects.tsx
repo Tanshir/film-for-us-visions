@@ -51,7 +51,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Discover the powerful stories and impactful films created by our community members, 
+            Discover the powerful stories and impactful films created by our community members,
             showcasing diverse voices and authentic narratives.
           </p>
         </div>
@@ -61,15 +61,18 @@ const Projects = () => {
           <Card className="overflow-hidden bg-card/30 backdrop-blur-md border-border/50 shadow-cinematic">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="relative group">
-                <img 
-                  src={projectsImage} 
-                  alt="Featured Projects" 
+                <img
+                  src={projectsImage}
+                  alt="Featured Projects"
+                  loading="lazy"
+                  width={1200}
+                  height={800}
                   className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]"
                 />
                 <div className="absolute inset-0 bg-gradient-hero opacity-50 group-hover:opacity-30 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="rounded-full w-16 h-16 bg-primary/90 hover:bg-primary hover:scale-110 transition-all duration-500 shadow-glow-spotlight"
                   >
                     <Play className="w-6 h-6 ml-1" />
@@ -82,8 +85,8 @@ const Projects = () => {
                 </div>
                 <h3 className="text-3xl font-bold mb-4">Community Chronicles 2024</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our most ambitious project yet - a collaborative documentary series 
-                  featuring stories from 15 different communities, showcasing the 
+                  Our most ambitious project yet - a collaborative documentary series
+                  featuring stories from 15 different communities, showcasing the
                   diversity and resilience of human experiences.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-6">
@@ -111,7 +114,7 @@ const Projects = () => {
         {/* Project Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
-            <Card 
+            <Card
               key={project.title}
               className="bg-card/30 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-glow-accent animate-fade-in group"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -131,7 +134,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                 </div>
-                
+
                 <div className="space-y-2 mb-4 text-xs">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Duration:</span>
@@ -147,8 +150,8 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <Button 
-                  variant="secondary" 
+                <Button
+                  variant="secondary"
                   className="w-full hover:border-primary hover:shadow-glow-accent transition-all duration-500"
                 >
                   <Play className="mr-2 h-4 w-4" />
@@ -162,7 +165,7 @@ const Projects = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={stat.label}
               className="animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
